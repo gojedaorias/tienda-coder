@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.icoCart{
+    width: 18px;
+    cursor: pointer;
+    &:hover{
+        width: 20px;
+    }
+}

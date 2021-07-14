@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.saludoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__titulo{
+        color: $color-claro;
+        font-family: $font;
+        font-size: 55px;
+        span{
+            border-bottom: 2px solid $color-primario;
+        }
+    }
+}

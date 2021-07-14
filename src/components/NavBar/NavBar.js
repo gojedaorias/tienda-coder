@@ -1,7 +1,10 @@
 import React from 'react';
-import styles from './NavBar.scss';
+import CartWidget from '../CartWidget/CartWidget';
+import './NavBar.scss';
 
 const NavBar = () => (
+  <>
+  <div className="navContainer">
   <div className="navbar">
   <div>
   <img className="navbar__logo" src="https://gabobranding.cl/wp-content/uploads/2020/09/Logo-bco@2x.png" alt="" />
@@ -15,6 +18,9 @@ const NavBar = () => (
   </ul>
   </nav>
   </div>
+  <CartWidget />
+  </div>
+  </>
 );
 
 export default NavBar;

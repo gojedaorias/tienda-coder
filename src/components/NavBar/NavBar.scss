@@ -1,33 +1,39 @@
 @import '../../styles/variables.scss';
 
-.navbar{
+.navContainer{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 30px 150px;
-    &__logo{
-        width: 150px;
-    }
-    &__menuContainer{
+    .navbar{
         display: flex;
-    }
-    &__menu{
-        display: flex;
-        li{
-            padding: 10px 30px;
-            text-decoration: none;
-            list-style: none;
-            color: $color-claro;
-            a{
-                text-decoration: none;
-                color: $color-claro;
-                font-family: $font;
-                border-bottom: 2px solid transparent;
+        justify-content: flex-start;
+        align-items: center;
 
-            }
-            a:hover{
-                font-weight: 700;
-                border-bottom: 2px solid $color-primario;
+        &__logo{
+            width: 150px;
+        }
+        &__menuContainer{
+            display: flex;
+        }
+        &__menu{
+            display: flex;
+            li{
+                padding: 10px 30px;
+                text-decoration: none;
+                list-style: none;
+                color: $color-claro;
+                a{
+                    text-decoration: none;
+                    color: $color-claro;
+                    font-family: $font;
+                    border-bottom: 2px solid transparent;
+    
+                }
+                a:hover{
+                    font-weight: 700;
+                    border-bottom: 2px solid $color-primario;
+                }
             }
         }
     }
