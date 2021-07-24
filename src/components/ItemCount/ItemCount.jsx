@@ -8,16 +8,12 @@ const ItemCount = ({ stock, initial}) => {
 
   const onAdd = () => {
     setStockStatus (stockStatus === 0 ? 0 :stockStatus - 1);
-    console.log(stockStatus);
-    stockStatus <= 0 ? setCount(5) : setCount(count === 5 ? 5 : count + 1); 
-    console.log(count);
+    stockStatus <= 0 ? setCount(stock) : setCount(count === stock ? stock : count + 1); 
   };
 
   const onRemove = () => {
-    setStockStatus (stockStatus === 5 ? 5 :stockStatus + 1);
-    console.log(stockStatus);
-    stockStatus >= 5 ? setCount(1) : setCount(count === 1 ? 1 : count - 1);
-    console.log(count);
+    setStockStatus (stockStatus === stock ? stock :stockStatus + 1);
+    stockStatus >= stock ? setCount(1) : setCount(count === 1 ? 1 : count - 1);
   };
 
   return (
