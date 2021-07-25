@@ -2,29 +2,52 @@
 @import '../../styles/variables.scss';
 
 
-.buttonCount{
-    border: none;
-    width: 38px;
-    height: 38px;
-    background: $color-primario;
-    color:$color-claro;
-    font-size: 18px;
-    cursor:pointer;
-    &:active{
-        font-weight: bold;
+.count{
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    border: 1px solid $color-primario;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__button{
+        border: none;
+        width: 20%;
+        height: 40px;
+        background: $color-primario;
+        color:$color-claro;
+        font-size: 18px;
+        padding: 0px;
+        cursor:pointer;
+        &:active{
+            font-weight: bold;
+        }
+        &:disabled{
+            background: $color-oscuro;
+        }
     }
-    &:disabled{
-        background: $color-oscuro;
+    &__input{
+        height: 40px;
+        width: 60%;
+        border: none;
+        color: $color-oscuro;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+        padding: 0;
+        background: $color-claro;
+
+        
     }
 }
-.inputCount{
-    height: 36px;
-    width: 80px;
-    border: none;
-    color: $color-oscuro;
-    font-size: 18px;
-    text-align: center;
-    font-weight: bold;
-
-    
+.addCart{
+    margin: 10px 0px 0px 0px;
+    &__button{
+        background: $color-primario;
+        width: 100%;
+        height: 50px;
+        color: #fff;
+        border: none;
+        border-radius: 0px 0px 15px 15px;
+        cursor: pointer;
+    }
 }

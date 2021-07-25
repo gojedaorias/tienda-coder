@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+
+.card{
+    max-width: 250px;
+    height: 100%;
+    background: #F7F7FF;
+    border-radius: 15px;
+    position: relative;
+    margin: 20px 15px 0px 15px;
+    &__imageItem{
+        width: 250px;
+        height: 100%;
+        border-radius: 15px 15px 0 0;
+    }
+    &__header{
+        position:relative ;
+        top: -70px;
+        height: 0px;
+    }
+    &__title{
+        color: $color-oscuro;
+        font-size: 22px;
+        padding: 5px 0px 0px 20px;
+
+    }
+    &__subtitle{
+        color: $color-oscuro;
+        font-size: 14px;
+        padding: 0px 0px 0px 20px;
+    }
+    &__id{
+        font-size: 12px;
+        padding: 5px 0px 0px 20px;
+        color: $color-realce;
+    }
+    &__price{
+        color: $color-realce;
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+        padding: 15px 0px 0px 20px;
+    }
+    &__normalPrice{
+        text-align: center;
+        color: $color-oscuro;
+        font-size: 11px;
+        text-decoration: line-through;
+    }
+}

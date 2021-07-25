@@ -17,12 +17,16 @@ const ItemCount = ({ stock, initial}) => {
   };
 
   return (
-    <div>
-      <button onClick={onRemove} className="buttonCount">-</button>
-     <input type="number" className="inputCount" value={count} onChange={e => onAdd(e.target.value)} />
-      <button className="buttonCount" onClick={onAdd}>+</button>
-      <p>{initial}</p>
+    <>
+    <div className="count">
+      <button onClick={onRemove} className="count__button">-</button>
+     <input type="number" className="count__input" value={count} onChange={e => onAdd(e.target.value)} />
+      <button className="count__button" onClick={onAdd}>+</button>
     </div>
+    <div className="addCart">
+      <button className="addCart__button">Agregar al Carro</button>
+    </div>
+    </>
   )
 };
 export default ItemCount;
