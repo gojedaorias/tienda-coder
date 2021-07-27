@@ -7,5 +7,6 @@ const task = new Promise((resolve, reject) => {
 });
 
 export const getProducts = () => {
-    return task;
+    return (task
+        )
 }

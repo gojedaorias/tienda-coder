@@ -1,6 +1,6 @@
 const products = [{
     id: 987123,
-    name: 'TERREX AGRAVIC TR',
+    productName: 'TERREX AGRAVIC TR',
     price: '$57.990',
     image: 'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/ecd72ba2a6694afea747ad3500705782_9366/Zapatillas_de_Trail_Running_Terrex_Agravic_TR_Morado_FZ2643_01_standard.jpg',
     category: 'Mujer Running',
@@ -9,7 +9,7 @@ const products = [{
     stock: 25,
 }, {
     id: 987124,
-    name: 'KAPTIR SUPER',
+    productName: 'KAPTIR SUPER',
     price: '$74.990',
     image: 'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/f6394a46d13d43d7919ead1e01855dd4_9366/Zapatillas_Kaptir_Super_Azul_H00848_01_standard.jpg',
     category: 'Hombre Running',
