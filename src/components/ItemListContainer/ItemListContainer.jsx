@@ -2,7 +2,6 @@ import React, {useState,useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
 import '../ItemListContainer/ItemListContainer.scss'
 import {getProducts} from '../../services/getProducts'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 
 

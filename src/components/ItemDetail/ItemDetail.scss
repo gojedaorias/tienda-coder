@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+
+.detailContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 30px 0px;
+    .detail{
+        width: 800px;
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        background: $color-claro;
+        &__productImage{
+            width: 70%;
+            img{
+                width: 100%;
+            }
+        }
+        &__info{
+            width: 30%;
+            &__topInfo{
+                height: 60%;
+                h1{
+                    color: $color-primario;
+                    font-size: 20px;
+                }
+            }
+        }
+     }
+}
