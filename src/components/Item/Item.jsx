@@ -1,13 +1,15 @@
 import React from 'react'
 import './Item.scss'
 import ItemCount from '../ItemCount/ItemCount.jsx'
+import { Link } from 'react-router-dom'
 
 function Item({productImg, productPrice,productNormalPrice,productId,productName,productCategory,initial,stock}) {
 
 
     return (
-        
-            <div className="card">
+        <>
+           <Link to={`/detail/${productId}`}>
+           <div className="card">
                 <div className="card__top">
                     <img className="card__imageItem" src={productImg} alt={productName} />
                 </div>
@@ -24,7 +26,8 @@ function Item({productImg, productPrice,productNormalPrice,productId,productName
                     </div>
                 </div>
             </div>
-        
+            </Link>
+        </>
     )
 }
 

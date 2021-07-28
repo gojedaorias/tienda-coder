@@ -2,7 +2,7 @@ import React from "react";
 import "./ItemDetail.scss";
 import ItemCount from "../ItemCount/ItemCount";
 
-const ItemDetail = ({ item = {} }) => {
+const ItemDetail = ({item= {} }) => {
   console.log(item.productName);
 
   return (
