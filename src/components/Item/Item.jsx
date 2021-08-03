@@ -1,6 +1,5 @@
 import React from 'react'
 import './Item.scss'
-import ItemCount from '../ItemCount/ItemCount.jsx'
 import { Link } from 'react-router-dom'
 
 function Item({productImg, productPrice,productNormalPrice,productId,productName,productCategory,initial,stock}) {
@@ -8,10 +7,11 @@ function Item({productImg, productPrice,productNormalPrice,productId,productName
 
     return (
         <>
-           <Link to={`/detail/${productId}`}>
            <div className="card">
                 <div className="card__top">
+           <Link to={`/detail/${productId}`}>
                     <img className="card__imageItem" src={productImg} alt={productName} />
+            </Link>
                 </div>
                 <div className="card__bottom">
                     <div className="card__header">
@@ -22,11 +22,9 @@ function Item({productImg, productPrice,productNormalPrice,productId,productName
                     <div className="card__info">
                         <p className="card__price">{productPrice}</p>
                         <p className="card__normalPrice">{productNormalPrice}</p>
-                        <ItemCount initial={1} stock={stock}/>
                     </div>
                 </div>
             </div>
-            </Link>
         </>
     )
 }

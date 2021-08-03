@@ -1,30 +1,49 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ItemCount.scss';
 
-const ItemCount = ({ stock, initial}) => {
+const ItemCount = ({ stock = 5, initial =1, onAdd}) => {
 
-  const [count, setCount] = useState(initial);
-  const [stockStatus, setStockStatus] = useState(stock);
+  const [cantidad, setCantidad] = useState(initial);
+  const [clickCart, setClickCart] = useState(false);
 
-  const onAdd = () => {
-    setStockStatus (stockStatus === 0 ? 0 :stockStatus - 1);
-    stockStatus <= 0 ? setCount(stock) : setCount(count === stock ? stock : count + 1); 
+  const handleOnAdd = () => {
+    if(cantidad < stock){
+      setCantidad(cantidad + 1);
+    }
   };
 
-  const onRemove = () => {
-    setStockStatus (stockStatus === stock ? stock :stockStatus + 1);
-    stockStatus >= stock ? setCount(1) : setCount(count === 1 ? 1 : count - 1);
+  const handleOnRemove = () => {
+   if(cantidad > initial){
+      setCantidad(cantidad - 1);
+    }
   };
+  const handleOnCart = () => {
+    onAdd(cantidad)
+    setClickCart(true)
+  }
+
 
   return (
     <>
-    <div className="count">
-      <button onClick={onRemove} className="count__button">-</button>
-     <input type="number" className="count__input" value={count} onChange={e => onAdd(e.target.value)} />
-      <button className="count__button" onClick={onAdd}>+</button>
-    </div>
+    {clickCart ? 
+    (<div></div>)
+    :(<div className="count">
+      <button onClick={handleOnRemove} className="count__button">-</button>
+     <input type="number" className="count__input" value={cantidad} onChange={e => handleOnAdd(e.target.value)} />
+      <button className="count__button" onClick={handleOnAdd}>+</button>
+    </div>)}
+    
     <div className="addCart">
-      <button className="addCart__button">Agregar al Carro</button>
+      {clickCart ? <Link to={`/cart`}><button className="addCart__buttonCart">Ver Carro</button></Link>
+                  :
+                  
+                    <button 
+                        className="addCart__buttonAdd"
+                        onClick={handleOnCart}
+                    >
+                        Agregar al Carro
+                    </button>}
     </div>
     </>
   )

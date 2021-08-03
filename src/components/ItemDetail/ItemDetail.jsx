@@ -5,6 +5,13 @@ import ItemCount from "../ItemCount/ItemCount";
 const ItemDetail = ({item= {} }) => {
   console.log(item.productName);
 
+  const [cantidad, setCantidad] = React.useState(0);
+
+  const onAdd =(count)=> {
+    setCantidad(count)
+}
+    console.log(cantidad);
+
   return (
     <div className="detailContainer">
       <div className="detail">
@@ -19,7 +26,7 @@ const ItemDetail = ({item= {} }) => {
             <p className="detail__description">{item.description}</p>
           </div>
           <div className="detail__bottomInfo">
-            <ItemCount className="detail__count" initial={1} stock={item.stock} />
+            <ItemCount className="detail__count" onAdd={onAdd} initial={1} stock={item.stock} />
           </div>
         </div>
       </div>
