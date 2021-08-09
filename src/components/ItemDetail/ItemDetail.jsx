@@ -1,16 +1,21 @@
-import React from "react";
+import React,{useContext, useState} from "react";
 import "./ItemDetail.scss";
 import ItemCount from "../ItemCount/ItemCount";
+import {CartContext} from "../../contexts/CartContext";
 
 const ItemDetail = ({item= {} }) => {
   console.log(item.productName);
 
-  const [cantidad, setCantidad] = React.useState(0);
+  const [quantity, setQuantity] = useState(0);
 
-  const onAdd =(count)=> {
-    setCantidad(count)
+  const {cartList,saveItem} = useContext(CartContext);
+
+  const onAdd =(quantity)=> {
+    setQuantity(quantity)
+    saveItem({item: item,quantity: quantity})
 }
-    console.log(cantidad);
+
+ 
 
   return (
     <div className="detailContainer">

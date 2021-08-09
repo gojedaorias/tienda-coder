@@ -3,12 +3,12 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import {getProducts} from '../../services/getProducts'
 import './ItemDetailContainer.scss'
 import { useParams } from 'react-router-dom';
-
 function ItemDetalContainer() {
     const [item, setItem] = useState({});
     const {id} = useParams()
 
   useEffect(() => {
+
     getProducts()
     .then(res => setItem(res.filter(i=> String(i.id) === id)[0]))
   }, [id])

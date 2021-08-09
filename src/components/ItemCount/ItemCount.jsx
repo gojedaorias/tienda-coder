@@ -4,22 +4,22 @@ import './ItemCount.scss';
 
 const ItemCount = ({ stock = 5, initial =1, onAdd}) => {
 
-  const [cantidad, setCantidad] = useState(initial);
+  const [quantity, setQuantity] = useState(initial);
   const [clickCart, setClickCart] = useState(false);
 
   const handleOnAdd = () => {
-    if(cantidad < stock){
-      setCantidad(cantidad + 1);
+    if(quantity < stock){
+      setQuantity(quantity + 1);
     }
   };
 
   const handleOnRemove = () => {
-   if(cantidad > initial){
-      setCantidad(cantidad - 1);
+   if(quantity > initial){
+      setQuantity(quantity - 1);
     }
   };
   const handleOnCart = () => {
-    onAdd(cantidad)
+    onAdd(quantity)
     setClickCart(true)
   }
 
@@ -30,7 +30,7 @@ const ItemCount = ({ stock = 5, initial =1, onAdd}) => {
     (<div></div>)
     :(<div className="count">
       <button onClick={handleOnRemove} className="count__button">-</button>
-     <input type="number" className="count__input" value={cantidad} onChange={e => handleOnAdd(e.target.value)} />
+     <input type="number" className="count__input" value={quantity} onChange={e => handleOnAdd(e.target.value)} />
       <button className="count__button" onClick={handleOnAdd}>+</button>
     </div>)}
     
