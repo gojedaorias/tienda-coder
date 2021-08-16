@@ -6,25 +6,27 @@ import { Route, BrowserRouter as Router, Switch} from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import CartContextProvider from "./contexts/CartContext";
 
-function App() {
+const App=()=> {
 
- 
 
   return (
-    <Router>
-      <Switch>
         
       <div className="App">
-        <NavBar  />
-        <CartContextProvider>
+        
+        
+    <Router>
+  
+      <Switch>
+      <CartContextProvider>
+      <NavBar  />
         <Route path="/" component={ItemListContainer} exact />
         <Route path="/detail/:id" component={ItemDetailContainer} />
-        <Route path="/category/:categodyId" component={ItemListContainer}/>
+        <Route path="/category/:categoryId" component={ItemListContainer}/>
         <Route path="/cart" component={Cart}/>
         </CartContextProvider>
-      </div>
       </Switch>
     </Router>
+      </div>
   );
 }
 

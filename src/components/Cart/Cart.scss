@@ -1,3 +1,130 @@
-p, h3{
-    color: white;
+@import "../../styles/variables.scss";
+.cart{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    position: relative;
+    &__empty{
+        background: #7a5be82f;
+        width: 80%;
+        padding: 30px ;
+        border-radius: 5px;
+    }
+    &__title{
+        color:$blanco;
+        font-size: 17px;
+        font-weight: normal;
+    }
+    &__link{
+        color: $color-realce;
+        text-decoration: underline;
+    }
+
+    // con productos
+    &__items{
+        width: 90vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__table{
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    &__rowhead{
+        color: $color-claro;
+        text-align: left;
+        margin-bottom: 10px;
+       
+        th{
+            padding-left: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: $color-claro solid 1px;
+        }
+    }
+    &__rowproduct{
+        padding-top: 40px;
+        td{
+            padding: 20px 20px;
+            border-bottom: $color-claro solid 1px;
+           
+        }
+    }
+    &__itemremove{
+        width: 10%;
+       
+        button{
+        background: transparent;
+        color: $color-claro;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 20px;
+        text-align: center;
+        }
+    }
+    &__itemproduct{
+        width: 35%;
+        color: $color-primario;
+        font-size: 17px;
+        font-weight: normal;
+        padding-left: 20px;
+    }
+    &__itemimage{
+        width: 15%;
+        img{
+            width: 100%;
+        }
+    }
+    &__itemprice{
+        width: 20%;
+        color: $blanco;
+        font-size: 17px;
+    }
+    &__itemquantity{
+        width: 20%;
+        color: $blanco;
+        font-size: 17px;
+    }
+
+    // total
+    &__total{
+        background: $color-oscuro;
+        width: 360px;
+        height: 250px;
+        border-radius: 5px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 35px 25px;
+    }
+    &__totalcontainer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    &__totalItem{
+        color: $color-claro;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    &__totalqty{
+        color: $blanco;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    &__cta{
+        background: $color-primario;
+        text-align: center;
+        margin-top: 35px;
+        padding: 20px 0px;
+        width: 100%;
+        color: $blanco;
+        font-weight: bold;
+        &:hover{
+            opacity: 90%;
+        }
+    }
+
 }

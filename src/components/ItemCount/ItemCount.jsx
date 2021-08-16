@@ -26,25 +26,28 @@ const ItemCount = ({ stock = 5, initial =1, onAdd}) => {
 
   return (
     <>
-    {clickCart ? 
+   <div className="itemCount">
+   {clickCart ? 
     (<div></div>)
     :(<div className="count">
-      <button onClick={handleOnRemove} className="count__button">-</button>
-     <input type="number" className="count__input" value={quantity} onChange={e => handleOnAdd(e.target.value)} />
-      <button className="count__button" onClick={handleOnAdd}>+</button>
+   <div className="count__buttoncontainer">
+   <button className="count__button" onClick={handleOnAdd}>+</button>
+    <button onClick={handleOnRemove} className="count__button">-</button>
+   </div>
+    <input type="number" className="count__input" value={quantity} onChange={e => handleOnAdd(e.target.value)} />
     </div>)}
-    
     <div className="addCart">
-      {clickCart ? <Link to={`/cart`}><button className="addCart__buttonCart">Ver Carro</button></Link>
+      {clickCart ? <Link to={`/cart`}><button className="addCart__buttonCart">Go Cart</button></Link>
                   :
                   
                     <button 
                         className="addCart__buttonAdd"
                         onClick={handleOnCart}
                     >
-                        Agregar al Carro
+                        Add Cart
                     </button>}
     </div>
+   </div>
     </>
   )
 };

@@ -4,11 +4,10 @@ import ItemCount from "../ItemCount/ItemCount";
 import {CartContext} from "../../contexts/CartContext";
 
 const ItemDetail = ({item= {} }) => {
-  console.log(item.productName);
 
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
-  const {cartList,saveItem} = useContext(CartContext);
+  const {saveItem} = useContext(CartContext);
 
   const onAdd =(quantity)=> {
     setQuantity(quantity)
@@ -18,24 +17,26 @@ const ItemDetail = ({item= {} }) => {
  
 
   return (
-    <div className="detailContainer">
+   <div className="detailcontainer">
       <div className="detail">
         <div className="detail__productImage">
-          <img src={item.image} alt="" className="detail__image" />
+          <img src={item.image} alt="foto de producto" className="detail__image" />
         </div>
         <div className="detail__info">
           <div className="detail__topInfo">
-            <h1 className="detail__name">{item.productName}</h1>
-            <p className="detail__subtitle">{item.category}</p>
-            <p className="detail__id">{item.id}</p>
+          <p className="detail__category">{item.category}</p>
+            <h1 className="detail__title">{item.productName}</h1>
+            <div className="detail__pricecontainer">
+            <p className="detail__normalPrice">${item.normalPrice}</p>
+            <p className="detail__price">${item.price}</p>
+            </div>
+            <ItemCount className="detail__count" onAdd={onAdd} initial={quantity} stock={item.stock} />
             <p className="detail__description">{item.description}</p>
-          </div>
-          <div className="detail__bottomInfo">
-            <ItemCount className="detail__count" onAdd={onAdd} initial={1} stock={item.stock} />
+         
           </div>
         </div>
-      </div>
     </div>
+   </div>
   );
 };
 

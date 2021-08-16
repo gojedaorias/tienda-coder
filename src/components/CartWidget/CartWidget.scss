@@ -1,9 +1,32 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
-.icoCart{
-    width: 18px;
+.icoCart {
+    text-decoration: none;
+    position: relative;
+  &__icon {
+    width: 22px;
     cursor: pointer;
-    &:hover{
-        width: 20px;
+    &:hover {
+      width: 20px;
     }
+  }
+  &__qtycontainer {
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    background: $color-primario;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__qty {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+  }
 }

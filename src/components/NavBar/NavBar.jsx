@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
+
 import './NavBar.scss';
 
-const NavBar = () => (
+
+const NavBar = () => {
+
+
+return(
   <>
   <div className="navContainer">
   <div className="navbar">
@@ -22,10 +27,11 @@ const NavBar = () => (
   </nav>
   </div>
   <Link to="/cart">
-  <CartWidget />
+
+    <CartWidget />
   </Link>
   </div>
   </>
-);
+)};
 
 export default NavBar;

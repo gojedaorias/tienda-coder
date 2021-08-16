@@ -1,21 +1,22 @@
 import Item from '../Item/Item'
 import './ItemList.scss'
 
-function ItemList({products}) {
+const ItemList=({items}) => {
 
     return (
         <div className="itemList">
-            {products.map(product =>{
+            {items.map(item =>{
                 return (
                     <Item 
-                        key={product.id}
-                        productName={product.productName}
-                        productPrice={product.price}
-                        productImage={product.image}
-                        stock={product.stock}
-                        productId={product.id}
-                        productImg={product.image}
-                        productCategory={product.category}
+                        key={item.id}
+                        productName={item.productName}
+                        productPrice={item.price}
+                        productImage={item.image}
+                        stock={item.stock}
+                        productId={item.id}
+                        productImg={item.image}
+                        productCategory={item.category}
+                        productNormalPrice={item.normalPrice}
                     />
                 )
             })}

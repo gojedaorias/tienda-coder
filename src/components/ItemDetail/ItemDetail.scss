@@ -1,33 +1,60 @@
 @import '../../styles/variables.scss';
 
 
-.detailContainer{
+.detailcontainer{
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    margin: 30px 0px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     .detail{
-        width: 800px;
-        display: flex; 
-        flex-direction: row;
-        justify-content: center;
-        background: $color-claro;
+        display: flex;
+        width: 80vw;
         &__productImage{
-            width: 70%;
+            min-width: 60%;
+            margin-right: 40px;
             img{
                 width: 100%;
             }
         }
-        &__info{
-            width: 30%;
-            &__topInfo{
-                height: 60%;
-                h1{
-                    color: $color-primario;
-                    font-size: 20px;
-                }
-            }
+        &__title{
+            color: $blanco;
+            font-size: 54px;
+            line-height: 71px;
+            font-weight: normal;
+            margin: 0px;
+            margin-bottom: 40px;
         }
-     }
+        &__category{
+            color: $color-primario;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        &__pricecontainer{
+            display: flex;
+            margin: 10px 0px;
+        }
+        &__price {
+            color: $color-primario;
+            font-weight: bold;
+            font-size: 27px;
+            text-align: center;
+            margin-left: 15px;
+          }
+          &__normalPrice {
+            text-align: center;
+            color: $color-claro;
+            font-size: 25px;
+            text-decoration: line-through;
+          }
+          &__description{
+              color: $blanco;
+              font-size: 17px;
+              line-height: 30px;
+              font-weight: normal;
+              margin-top: 60px;
+          }
+    }
 }

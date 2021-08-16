@@ -1,50 +1,65 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
-
-.card{
-    max-width: 250px;
+.card {
+  max-width: 280px;
+  height: 400px;
+  position: relative;
+  margin: 20px 15px 0px 15px;
+  cursor: pointer;
+  &:hover {
+    .card__cta {
+      display: block;
+    }
+  }
+  &__imageItem {
+    width: 250px;
     height: 100%;
-    background: #F7F7FF;
-    border-radius: 15px;
-    position: relative;
-    margin: 20px 15px 0px 15px;
-    &__imageItem{
-        width: 250px;
-        height: 100%;
-        border-radius: 15px 15px 0 0;
-    }
-    &__header{
-        position:relative ;
-        top: -70px;
-        height: 0px;
-    }
-    &__title{
-        color: $color-oscuro;
-        font-size: 22px;
-        padding: 5px 0px 0px 20px;
+  }
+  &__header {
+    padding: 10px 0px;
+  }
 
+  &__title {
+    color: $blanco;
+    font-size: 16px;
+  }
+  &__category {
+    color: $blanco;
+    font-size: 12px;
+    font-weight: bold;
+    background: $color-primario;
+    position: absolute;
+    top: 0px;
+    padding: 10px 10px;
+  }
+  &__info {
+    display: flex;
+  }
+  &__price {
+    color: $color-primario;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 15px;
+  }
+  &__normalPrice {
+    text-align: center;
+    color: $color-claro;
+    font-size: 16px;
+    text-decoration: line-through;
+  }
+  &__cta {
+    display: none;
+    color: $blanco;
+    background: $color-primario;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px 15px;
+    margin-top: 20px;
+    &:hover {
+      opacity: 90%;
+      background: $color-realce;
     }
-    &__subtitle{
-        color: $color-oscuro;
-        font-size: 14px;
-        padding: 0px 0px 0px 20px;
-    }
-    &__id{
-        font-size: 12px;
-        padding: 5px 0px 0px 20px;
-        color: $color-realce;
-    }
-    &__price{
-        color: $color-realce;
-        font-weight: bold;
-        font-size: 36px;
-        text-align: center;
-        padding: 15px 0px 0px 20px;
-    }
-    &__normalPrice{
-        text-align: center;
-        color: $color-oscuro;
-        font-size: 11px;
-        text-decoration: line-through;
-    }
+  }
 }
