@@ -1,13 +1,13 @@
 import Item from '../Item/Item'
 import './ItemList.scss'
 
-const ItemList=({items}) => {
+const ItemList = ({ items }) => {
 
     return (
         <div className="itemList">
-            {items.map(item =>{
+            {items.map(item => {
                 return (
-                    <Item 
+                    <Item
                         key={item.id}
                         productName={item.productName}
                         productPrice={item.price}
