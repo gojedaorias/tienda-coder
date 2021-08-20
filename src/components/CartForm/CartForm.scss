@@ -1,0 +1,67 @@
+@import "../../styles/variables.scss";
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    .formtitle{
+        color: $color-primario;
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    .formOrder{
+        color: $blanco;
+    }
+    &__link{
+        background: $color-primario;
+        border-radius: 5px;
+        margin-top: 50px;
+        border: none;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 100px;
+        color: $blanco;
+        font-weight: bold;
+        &:hover{
+            opacity: 90%;
+        }
+    }
+    .cartform{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        margin-bottom: 100px;
+        &__label{
+            color: $color-primario;
+        }
+        &__input{
+            margin: 10px 0px 30px ;
+            height: 60px;
+            border-radius: 5px;
+            background: $color-oscuro;
+            opacity: 50%;
+            outline: none;
+            border: none;
+            padding: 15px;
+            color: $blanco;
+            font-size: 17px;
+        }
+        &__submit{
+        background: $color-primario;
+        border-radius: 5px;
+        border: none;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px 0px;
+        width: 100%;
+        color: $blanco;
+        font-weight: bold;
+        &:hover{
+            opacity: 90%;
+        }
+        }
+    }
+}

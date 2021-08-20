@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,} from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../contexts/CartContext'
 import './Cart.scss'
@@ -9,13 +9,15 @@ function Cart() {
 
 
     return (
+        <>
         <div className="cart">
             {cartList.length === 0 ?
                 <div className="cart__empty">
-                    <h1 className="cart__title">Tu carro esta vacio :( </h1>
+                    <h1 className="cart__title">Tu carro esta vacio :c </h1>
                     <Link className="cart__link" to="/">Vuelve a ver más productos</Link>
                 </div>
-                : <div className="cart__items">
+                : 
+                    <div className="cart__items">
                     <table className="cart__table">
                         <thead className="cart__tablehead">
                             <tr className="cart__rowhead">
@@ -50,10 +52,14 @@ function Cart() {
                             <p className="cart__totalItem">Precio Total</p>
                             <p className="cart__totalqty">${cartPrice()}</p>
                         </div>
-                        <Link className="cart__cta" to="/checkout">COMPRAR</Link>
+                        <Link  className="cart__cta" to="/checkout">COMPRAR</Link>
                     </div>
-                </div>}
+                    
+                </div> 
+    }
+                
         </div>
+        </>
     )
 }
 
