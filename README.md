@@ -1,16 +1,16 @@
 # Proyecto Tienda Coder
 
-* Gabriel Ojeda 
+**Gabriel Ojeda**
 
 ## Librerias o Hooks externos usados
 
-#### UseForm
+### UseForm
 [react hook form](https://react-hook-form.com/)
 
 `npm install react-hook-form `   
 
 
-#### Sass
+### Sass
 [Node Sass](https://sass-lang.com/)
 
 `npm install node-sass`
@@ -19,16 +19,18 @@
 
 ### Componentes
 
-Navbar
-Menu
-CartWidget
-ItemList
-ItemDetail
-Item
-Cart
-CheckOut
+- Navbar
+- Menu
+- CartWidget
+- ItemList
+- ItemDetail
+- Item
+- Cart
+- CheckOut
 
 ### Contenedores
 
-ItemListContainer
-ItemDetailContainer
+- ItemListContainer
+- ItemDetailContainer
+
+*proyecto Coder House curso React Js, Camada **16915***
