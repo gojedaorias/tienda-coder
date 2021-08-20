@@ -7,6 +7,9 @@
 ### UseForm
 [react hook form](https://react-hook-form.com/)
 
+Custom Hook usado para el manejo de formularios, facilita la creacion de formularios y fue usado tambien,
+con el proposito de aprender a usar custom hook externos.
+
 `npm install react-hook-form `   
 
 
@@ -14,6 +17,8 @@
 [Node Sass](https://sass-lang.com/)
 
 `npm install node-sass`
+
+Traspilador de Css usado para agilizar la escritura de CSS.
 
 ## Listado de componentes
 

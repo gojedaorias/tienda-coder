@@ -48,11 +48,19 @@
             padding: 15px;
             color: $blanco;
             font-size: 17px;
+            &:active , &:focus{
+                border: 1px solid $color-primario;
+            }
+            &--error{
+                border: 1px solid red;
+            }
         }
+        
         &__submit{
         background: $color-primario;
         border-radius: 5px;
         border: none;
+        cursor: pointer;
         text-align: center;
         text-transform: uppercase;
         padding: 20px 0px;
@@ -62,6 +70,18 @@
         &:hover{
             opacity: 90%;
         }
+        &:disabled{
+            background: $color-oscuro;
+            cursor: default;
+            color: $color-claro;
         }
+        }
+        &__emailerror{
+            color: red;
+            margin-top: -30px;
+            margin-bottom: 30px;
+            font-size: 13px;
+        }
+        
     }
 }
